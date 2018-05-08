@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4444</color>
+    <color name="dreamText">#FF4455</color>
+    <color name="loginPasswordEdittEXT">#FF0000</color>
+    <color name="commonRed">#DD334F</color>
+    <color name="commonRed2">#DB3652</color>
+    <color name="progress">#0081FF</color>
+    <color name="commongray">#e9e9e9</color>
+    <color name="overgray">#cccccc</color>
+    <color name="commonblue">#59b8f3</color>
+    <color name="winer">#fff0de</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#1a1a1a</color>
+    <color name="lightblack">#595959</color>
+    <color name="mylightgray">#bfbfbf</color>
+    <color name="divider">#e9e9e9</color>
+    <color name="dividerarea">#f6f6f6</color>
+    <color name="btn_gray_normal">#c0c0c0</color>
+
+    <color name="gray">#a4a4a4</color>
+    <!--<color name="tab">#7c7c7c</color>-->
+    <color name="search">#aeaeae</color>
+    <color name="detail_winner">#888888</color>
+    <color name="light_blue">#6593cb</color>
+    <color name="light_zi">#bbbbff</color>
+    <color name="light_green">#37c34b</color>
+    <color name="background_tab_pressed">#33B5E5</color>
+    <color name="slidingtab_indicator_color">#ff6060</color>
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="progressbar">#FA8000</color>
+    <color name="text_orange">#f5b33c</color>
+    <color name="btn_bg_orange">#fde233</color>
+
+    <!-- RefreshTabView  start-->
+    <color name="color_gray_eaeaea">#eaeaea</color>
+    <color name="color_black_333333">#333333</color>
+    <color name="color_grey_999999">#999999</color>
+    <color name="color_black_d9d9d9">#d9d9d9</color>
+    <color name="color_purple_bd6aff">#bd6aff</color>
+    <color name="GreyWhite_has_alpha">#66FAFAFA</color>
+    <color name="transparent">#00000000</color>
+    <color name="action_bar_tittle_color_555555">#555555</color>
+    <!-- RefreshTabView  end-->
+
+    <!-- WxPay  start-->
+    <color name="blue">#ffccddff</color>
+    <color name="grey">#58616d</color>
+    <color name="darkgrey">#ff404040</color>
+    <color name="toasterro">#9fd524</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="semitransparent">#80000000</color>
+    <color name="lightransparent">#a0000000</color>
+    <color name="navpage">#FFE1E8EB</color>
+    <!-- WxPay  end-->
+</resources>

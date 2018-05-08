@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_title"/>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/y50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_grey_999999"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/x34"
+                android:textColor="@color/white"
+                />
+
+            <Button
+                android:id="@+id/bt_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更换"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/y90"
+                android:textSize="@dimen/x34"
+                android:background="@drawable/round_white_gray"
+                android:inputType="phone"
+                />
+
+            <Button
+                android:id="@+id/bt_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保存"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

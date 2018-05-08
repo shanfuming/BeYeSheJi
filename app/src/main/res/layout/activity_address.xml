@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/base_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_addressNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y150"
+                android:id="@+id/tv_address"
+                android:textSize="@dimen/x45"
+                android:lines="2"
+                android:gravity="center_vertical"
+                android:layout_marginRight="@dimen/x80"
+                android:layout_marginTop="@dimen/x10"
+                android:layout_marginLeft="@dimen/x20"
+                android:clickable="true"
+                android:focusable="true"
+                />
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="@dimen/x80"
+                android:layout_height="@dimen/x80"
+                android:background="@mipmap/next02"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x30"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <EditText
+                android:hint="请输入地址"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/y150"
+                android:id="@+id/et_addAddress"
+                android:textSize="@dimen/x45"
+                android:lines="2"
+                android:layout_margin="@dimen/x10"
+                />
+
+            <Button
+                android:id="@+id/bt_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加"
+
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y20"
+        android:background="@color/divider"/>
+
+    <TextView
+        android:text="点击可选择地址,点击箭头可以修改地址"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y60"
+        android:textSize="@dimen/x30"
+        android:lines="2"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/x20"
+        />
+</LinearLayout>

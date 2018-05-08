@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/base_title"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x500"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@mipmap/p1" />
+
+                <TextView
+                    android:id="@+id/thing_title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="描述一"
+                    android:textSize="@dimen/x28"
+                    android:layout_marginTop="@dimen/y20"
+                    />
+
+                <TextView
+                    android:id="@+id/thing_title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="副标题描述"
+                    android:textSize="@dimen/x28"
+                    android:layout_marginTop="@dimen/y10"
+                    />
+
+                <TextView
+                    android:id="@+id/thing_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="价格"
+                    android:textSize="@dimen/x28"
+                    android:layout_marginTop="@dimen/y15"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y2"
+        android:background="@color/black"
+        android:layout_above="@+id/ll_button"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_bg_white"
+        >
+
+        <ImageView
+            android:id="@+id/iv_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bill"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginLeft="@dimen/x20"
+            />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y80"
+            android:layout_weight="1"
+            android:text="加入购物车"
+            android:textColor="#fff"
+            android:background="@drawable/round_bg_red"
+
+            />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y80"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/x10"
+            android:background="@drawable/round_bg_red"
+            android:textColor="#fff"
+            android:text="立即付款" />
+    </LinearLayout>
+</RelativeLayout>

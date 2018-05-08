@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/y150"
+            android:text="TextView"
+            android:textSize="@dimen/x45" />
+
+        <Button
+            android:id="@+id/bt_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_bg_red"
+            android:text="支付"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x25" />
+
+        <RelativeLayout
+            android:id="@+id/rl_address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y200"
+            android:layout_below="@+id/tv_money"
+            android:layout_marginBottom="@dimen/y40"
+            android:layout_marginTop="@dimen/y150"
+            android:background="@color/btn_gray_normal"
+            >
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y200"
+                android:lines="2"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x20"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/y50"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x20"
+                android:background="@mipmap/next02" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_paytype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_address"
+            android:background="@color/btn_gray_normal">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x45"
+                android:layout_marginStart="@dimen/x45"
+                app:srcCompat="@mipmap/wechat" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/imageView2"
+                android:text="微信支付" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x30"
+                app:srcCompat="@mipmap/checkbox_true" />
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

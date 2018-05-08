@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sfm.beyesheji">
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".global.BYSJApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity android:name=".ForgetPassActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".RegistActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".Menu_ShipinActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".Menu_ShijiActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".Menu_OwnActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ThingActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".PayActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".PaySuccessActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ClassifyActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".CarActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".OwnInformationActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".OrderActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".LikeActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".AddressActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UserActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ShiPinActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".SearchActivity"
+            android:screenOrientation="portrait"
+            />
+    </application>
+
+</manifest>
