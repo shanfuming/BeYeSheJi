@@ -16,7 +16,7 @@ import com.sfm.beyesheji.util.SharePrefUtil;
 import com.sfm.beyesheji.util.ToastUtil;
 
 /**
- * Created by shanfuming on 2018/5/6.
+ * 地址页面
  */
 
 public class AddressActivity extends BaseActivity implements View.OnClickListener {
@@ -65,6 +65,10 @@ public class AddressActivity extends BaseActivity implements View.OnClickListene
         iv_next.setOnClickListener(this);
     }
 
+    /**
+     * 给相应的控件添加点击事件
+     * @param v
+     */
     @Override
     public void onClick(View v) {
         switch (v.getId()){

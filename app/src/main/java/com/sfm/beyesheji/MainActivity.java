@@ -19,6 +19,10 @@ import com.sfm.beyesheji.util.ToastUtil;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 底部按钮控制页面
+ */
+
 public class MainActivity extends MenuActivity implements OnClickListener {
 
     public static final String SHIJI = "Shiji";
@@ -140,18 +144,10 @@ public class MainActivity extends MenuActivity implements OnClickListener {
         }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_PERMISSION_STORAGE) {
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-            } else {
-                ToastUtil.showToast(this,"权限被禁止，无法完成自动更新");
-            }
-        }
-    }
-
+    /**
+     * 底部按钮点击效果
+     * @param img
+     */
     private void setImgAnimation(ImageView img){
         ObjectAnimator scaleY = ObjectAnimator.ofFloat(img, "scaleY", 1, 1.5f, 1);
         ObjectAnimator scaleX = ObjectAnimator.ofFloat(img, "scaleX", 1, 1.5f, 1);
@@ -159,9 +155,5 @@ public class MainActivity extends MenuActivity implements OnClickListener {
         set.playTogether(scaleX,scaleY);
         set.setDuration(400);
         set.start();
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
     }
 }

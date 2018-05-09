@@ -58,9 +58,6 @@
         <activity android:name=".CarActivity"
             android:screenOrientation="portrait"
             />
-        <activity android:name=".OwnInformationActivity"
-            android:screenOrientation="portrait"
-            />
         <activity android:name=".OrderActivity"
             android:screenOrientation="portrait"
             />
@@ -74,9 +71,6 @@
             android:screenOrientation="portrait"
             />
         <activity android:name=".ShiPinActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".SearchActivity"
             android:screenOrientation="portrait"
             />
     </application>

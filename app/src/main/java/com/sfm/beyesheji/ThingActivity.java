@@ -14,7 +14,7 @@ import com.sfm.beyesheji.global.BYSJApplication;
 import com.sfm.beyesheji.util.ToastUtil;
 
 /**
- * Created by shanfuming on 2018/5/5.
+ * 商品详情页
  */
 
 public class ThingActivity extends BaseActivity implements View.OnClickListener {

@@ -17,7 +17,7 @@ import com.sfm.beyesheji.util.ToastUtil;
 import java.util.regex.Pattern;
 
 /**
- * Created by shanfuming on 2018/5/4.
+ * 注册页面
  */
 
 public class RegistActivity extends BaseActivity implements View.OnClickListener {
@@ -63,7 +63,7 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
             case R.id.tv_rf_regist:
                 regist();
                 break;
-            case R.id.tv_rf_getCode:
+            case R.id.tv_rf_getCode://发送验证码前，判断是否符合手机号格式
                 String userPhone = et_phone.getText().toString().trim();
                 if (TextUtils.isEmpty(userPhone)) {
                     ToastUtil.showToast(getApplicationContext(), "手机号不能为空");
@@ -82,6 +82,9 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
         }
     }
 
+    /**
+     * 注册
+     */
     private void regist() {
         String userPhone = et_phone.getText().toString().trim();
         String password = et_pass.getText().toString().trim();
@@ -109,14 +112,16 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
             ToastUtil.showToast(getApplicationContext(), "请正确输入验证码");
             return;
         }
-
+        //将用户保存在本地
         SharePrefUtil.saveString(this,userPhone,password);
         ToastUtil.showToast(BYSJApplication.sContext,"注册成功");
         finish();
 
     }
 
-
+    /**
+     * 倒计时类
+     */
     class TimeCount extends CountDownTimer {
         public TimeCount(long millisInFuture, long countDownInterval) {
             super(millisInFuture, countDownInterval);// 参数依次为总时长,和计时的时间间隔

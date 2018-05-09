@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * Created by shanfuming on 2018/5/6.
+ * 收藏页面
  */
 
 public class LikeActivity extends BaseActivity implements View.OnClickListener {

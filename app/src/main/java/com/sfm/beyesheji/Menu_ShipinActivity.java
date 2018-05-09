@@ -25,7 +25,7 @@ import com.sfm.beyesheji.util.ToastUtil;
 import java.util.ArrayList;
 
 /**
- * Created by shanfuming on 2018/5/4.
+ * 视频页面
  */
 
 public class Menu_ShipinActivity extends BaseActivity implements View.OnClickListener {

@@ -21,7 +21,7 @@ import com.sfm.beyesheji.util.ToastUtil;
 import java.util.ArrayList;
 
 /**
- * Created by shanfuming on 2018/5/5.
+ * 支付页面
  */
 
 public class PayActivity extends BaseActivity {
@@ -44,7 +44,7 @@ public class PayActivity extends BaseActivity {
                 case 2:
                     progressBar.setVisibility(View.GONE);
 
-                    //保存购物车数据
+                    //保存已付款商品数据
                     if (things.size() == 0 && thing != null){
                         thing.setIsBuy(1);
                         dataHandler.save(thing);
@@ -54,7 +54,9 @@ public class PayActivity extends BaseActivity {
                             dataHandler.save(things.get(i));
                         }
                     }
-
+                    //清空购物车中已付款的商品
+                    dataHandler.deleteAllCar();
+                    //跳转付款成功页面
                     Intent intent = new Intent(PayActivity.this,PaySuccessActivity.class);
                     startActivity(intent);
 
@@ -87,6 +89,7 @@ public class PayActivity extends BaseActivity {
         super.initData();
 
         final Intent intent = getIntent();
+        //判断是由商品详情页还是购物车页面跳转到付款页面：turnNUm = 1是从商品详情页跳转
         if (intent.getIntExtra("turnNUm",0) == 1){
             Bundle bundle = intent.getBundleExtra("buyThing");
             thing = (Thing) bundle.getSerializable("theThing");
@@ -96,8 +99,7 @@ public class PayActivity extends BaseActivity {
             Bundle bundle = intent.getBundleExtra("carBundle");
             things.addAll((ArrayList<Thing>) bundle.getSerializable("carlist"));
         }
-
-
+        //判断收货地址的显示
         if (TextUtils.isEmpty(SharePrefUtil.getString(BYSJApplication.sContext,"address",""))){
             tv_address.setText("未添加收货地址");
         }else{
@@ -123,6 +125,7 @@ public class PayActivity extends BaseActivity {
         tv_pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //判断是否添加了收货地址，如未添加先跳到收货地址页添加收货地址
                 if (!TextUtils.isEmpty(SharePrefUtil.getString(BYSJApplication.sContext,"address",""))){
                     handler.sendEmptyMessage(1);
                 }else{
@@ -133,6 +136,12 @@ public class PayActivity extends BaseActivity {
 
     }
 
+    /**
+     * 将页面携带回来的数据进行展示：收货地址
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

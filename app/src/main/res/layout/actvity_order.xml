@@ -8,7 +8,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <ListView
             android:id="@+id/order_listview"
@@ -25,6 +26,21 @@
             android:layout_centerInParent="true"
             />
 
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y100">
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/bt_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="删除"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x34"
+            />
     </RelativeLayout>
 
 </LinearLayout>

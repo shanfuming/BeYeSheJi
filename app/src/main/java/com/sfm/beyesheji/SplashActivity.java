@@ -12,7 +12,7 @@ import com.sfm.beyesheji.global.BYSJApplication;
 import com.sfm.beyesheji.util.SharePrefUtil;
 
 /**
- * Created by shanfuming on 2018/5/4.
+ * 开屏页
  */
 
 public class SplashActivity extends BaseActivity{
@@ -39,7 +39,7 @@ public class SplashActivity extends BaseActivity{
     protected void initData() {
         super.initData();
         imageView = (ImageView) findViewById(R.id.imageView);
-
+        //延迟展示1。5秒在跳转登录页
         handler.sendEmptyMessageDelayed(1,1500);
     }
 

@@ -193,4 +193,28 @@
 
     </RelativeLayout>
 
+    <View
+        android:background="@color/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_own_out"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y120"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/x45"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/x20"
+            android:text="退出登录"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
 </LinearLayout>

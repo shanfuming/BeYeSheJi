@@ -14,7 +14,7 @@ import com.sfm.beyesheji.util.ToastUtil;
 import java.util.regex.Pattern;
 
 /**
- * Created by shanfuming on 2018/5/6.
+ * 修改手机号页面
  */
 
 public class UserActivity extends BaseActivity implements View.OnClickListener {
@@ -61,7 +61,7 @@ public class UserActivity extends BaseActivity implements View.OnClickListener {
             case R.id.bt_save:
                 ll_change.setVisibility(View.GONE);
                 ll_show.setVisibility(View.VISIBLE);
-
+                //判断手机号是否符合格式
                 if (TextUtils.isEmpty(et_phone.getText().toString().trim())) {
                     ToastUtil.showToast(BYSJApplication.sContext, "请输入手机号");
                     return;
@@ -70,6 +70,7 @@ public class UserActivity extends BaseActivity implements View.OnClickListener {
                     ToastUtil.showToast(BYSJApplication.sContext, "请输入正确的手机号");
                     return;
                 }
+                //符合就保存在本地，修改username字段对应的保存值
                 SharePrefUtil.saveString(BYSJApplication.sContext,
                         et_phone.getText().toString().trim(),
                         SharePrefUtil.getString(BYSJApplication.sContext,tvPhone.getText().toString(),""));

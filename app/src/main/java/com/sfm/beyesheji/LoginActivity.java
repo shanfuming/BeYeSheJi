@@ -15,6 +15,10 @@ import com.sfm.beyesheji.util.ToastUtil;
 
 import java.util.regex.Pattern;
 
+/**
+ * 登录页面
+ */
+
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView iv_close;
@@ -60,11 +64,17 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         }
     }
 
+    /**
+     * 忘记密码
+     */
     private void forgetPass() {
         Intent intent = new Intent(this,ForgetPassActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * 注册
+     */
     private void regist() {
         String userphone = et_username.getText().toString().trim();
         Intent intent = new Intent(this,RegistActivity.class);
@@ -74,6 +84,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         startActivity(intent);
     }
 
+    /**
+     * 登录：点击登录时会进行验证，是否注册，是否正确填写账号密码等
+     */
     private void login() {
         final String userphone = et_username.getText().toString().trim();
         final String password = et_password.getText().toString().trim();

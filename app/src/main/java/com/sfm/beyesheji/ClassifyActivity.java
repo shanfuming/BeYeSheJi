@@ -6,7 +6,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
- * Created by shanfuming on 2018/5/5.
+ *
+ * 分类页面-无展示
  */
 
 public class ClassifyActivity extends BaseActivity {

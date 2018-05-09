@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * Created by shanfuming on 2018/5/5.
+ * 购物车页面
  */
 
 public class CarActivity extends BaseActivity implements View.OnClickListener {
@@ -61,9 +61,10 @@ public class CarActivity extends BaseActivity implements View.OnClickListener {
         tv_delete.setOnClickListener(this);
         bt_buy.setOnClickListener(this);
         bt_delete.setOnClickListener(this);
-
+        //展示数据库中的购物车数据
         dataHandler = new DataHandler(BYSJApplication.sContext);
         things.addAll(dataHandler.findCar());
+        //判断展示列表数据还是无商品的提示
         if (things.size() == 0){
             tv_tip.setVisibility(View.VISIBLE);
             car_list.setVisibility(View.GONE);
@@ -93,7 +94,7 @@ public class CarActivity extends BaseActivity implements View.OnClickListener {
                 }
                 carAdapter.notifyDataSetChanged();
                 break;
-            case R.id.bt_buy:
+            case R.id.bt_buy://跳转到支付页面：携带购物车列表数据
                 if (things.size() == 0){
                     bt_buy.setClickable(false);
                     ToastUtil.showToast(BYSJApplication.sContext,"请先浏览商品");
@@ -112,19 +113,16 @@ public class CarActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.bt_delete:
                 for (int position : deleteList.keySet()){
-                    dataHandler.delete(deleteList.get(position).getTitle1());
+                    dataHandler.deleteCar(deleteList.get(position).getTitle1());
                 }
-                things.clear();
-                things.addAll(dataHandler.findCar());
-                carAdapter.notifyDataSetChanged();
-                if (things.size() == 0){
-                    tv_tip.setVisibility(View.VISIBLE);
-                    car_list.setVisibility(View.GONE);
-                }
+                update();
                 break;
         }
     }
 
+    /**
+     * 列表展示适配器
+     */
     class CarAdapter extends BaseAdapter {
 
         private ArrayList<Thing> things;
@@ -172,6 +170,7 @@ public class CarActivity extends BaseActivity implements View.OnClickListener {
             myHolder.img.setImageResource(things.get(position).getImgId());
             myHolder.select.setImageDrawable(getResources().getDrawable(R.mipmap.selectgray));
             final MyHolder finalMyHolder = myHolder;
+            //判断管理列表时，对应条目的选中显示
             myHolder.select.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -203,5 +202,29 @@ public class CarActivity extends BaseActivity implements View.OnClickListener {
         ImageView img;
         TextView tip;
         ImageView select;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        allMoney = 0;
+        update();
+    }
+
+    /**
+     * 更新购物车数据展示
+     */
+    private void update(){
+        things.clear();
+        things.addAll(dataHandler.findCar());
+        if (things.size() == 0){
+            tv_tip.setVisibility(View.VISIBLE);
+            car_list.setVisibility(View.GONE);
+        }else{
+            tv_tip.setVisibility(View.GONE);
+            car_list.setVisibility(View.VISIBLE);
+        }
+        carAdapter.notifyDataSetChanged();
     }
 }

@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
 /**
- * Created by shanfuming on 2018/5/4.
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
@@ -18,7 +17,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         initView();
         initData();
     }
-
+    //获取所有页面控件
     protected abstract void initView();
+    //处理基本的数据逻辑
     protected void initData(){}
 }

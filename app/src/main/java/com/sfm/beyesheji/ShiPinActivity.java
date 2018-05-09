@@ -21,7 +21,7 @@ import com.sfm.beyesheji.global.BYSJApplication;
 import com.sfm.beyesheji.util.ToastUtil;
 
 /**
- * Created by shanfuming on 2018/5/5.
+ * 视频详情页
  */
 
 public class ShiPinActivity extends BaseActivity implements View.OnClickListener {

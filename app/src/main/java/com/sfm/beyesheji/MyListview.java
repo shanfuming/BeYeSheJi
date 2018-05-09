@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.widget.ListView;
 
 /**
- * Created by shanfuming on 2018/5/5.
+ * 自定义Listview，可配合ScrollView使用，进行嵌套滑动
  */
 
 public class MyListview extends ListView {

@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Button;
 
 /**
- * Created by shanfuming on 2018/5/5.
+ * 支付成功页
  */
 
 public class PaySuccessActivity extends BaseActivity implements View.OnClickListener {
@@ -30,10 +30,10 @@ public class PaySuccessActivity extends BaseActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.bt_back:
+            case R.id.bt_back://返回
                 finish();
                 break;
-            case R.id.bt_order:
+            case R.id.bt_order://查看订单
                 Intent intent = new Intent(this,OrderActivity.class);
                 startActivity(intent);
                 break;

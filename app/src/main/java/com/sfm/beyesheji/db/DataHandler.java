@@ -25,12 +25,27 @@ public class DataHandler {
 
         db.close();// 记得关闭数据库操作
     }
-    // 删除指定的商品
-    public void delete(String thingTitle1) {
+    // 删除指定的购物车商品
+    public void deleteCar(String thingTitle1) {
         SQLiteDatabase db = dbOpenHandler.getWritableDatabase();
-        db.execSQL("delete from car where ThingTitle1=?", new Object[]{thingTitle1});
+        db.execSQL("delete from car where ThingTitle1=? and IsBuy = 0;", new Object[]{thingTitle1});
         db.close();
     }
+
+    // 删除指定的购物车商品
+    public void deleteAllCar() {
+        SQLiteDatabase db = dbOpenHandler.getWritableDatabase();
+        db.execSQL("delete from car where IsBuy = 0;");
+        db.close();
+    }
+
+    // 删除订单中的商品
+    public void deleteOrder(String thingTitle1) {
+        SQLiteDatabase db = dbOpenHandler.getWritableDatabase();
+        db.execSQL("delete from car where ThingTitle1=? and IsBuy = 1;", new Object[]{thingTitle1});
+        db.close();
+    }
+
     // 删除全部的商品
     public void deleteAll() {
         SQLiteDatabase db = dbOpenHandler.getWritableDatabase();

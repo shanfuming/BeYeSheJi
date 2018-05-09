@@ -27,7 +27,7 @@ import com.sfm.beyesheji.util.ToastUtil;
 import java.util.ArrayList;
 
 /**
- * Created by shanfuming on 2018/5/4.
+ * 市集页面
  */
 
 public class Menu_ShijiActivity extends BaseActivity implements View.OnClickListener {
@@ -76,13 +76,13 @@ public class Menu_ShijiActivity extends BaseActivity implements View.OnClickList
     @Override
     protected void initData() {
         super.initData();
-
+        // 使用假数据进行展示
         Thing thing1 = new Thing("商品一","副标题描述一",R.mipmap.p1,"120000");
         Thing thing2 = new Thing("商品二","副标题描述二",R.mipmap.p2,"230000");
         Thing thing3 = new Thing("商品三","副标题描述三",R.mipmap.p3,"150000");
         Thing thing4 = new Thing("商品四","副标题描述四",R.mipmap.p4,"450000");
         Thing thing5 = new Thing("商品五","副标题描述五",R.mipmap.p5,"70000");
-        Thing thing6 = new Thing("商品六","副标题描述六",R.mipmap.p6,"128000s");
+        Thing thing6 = new Thing("商品六","副标题描述六",R.mipmap.p6,"128000");
         things.add(thing1);
         things.add(thing2);
         things.add(thing3);

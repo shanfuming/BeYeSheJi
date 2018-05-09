@@ -17,7 +17,7 @@ import com.sfm.beyesheji.util.ToastUtil;
 import java.util.regex.Pattern;
 
 /**
- * Created by shanfuming on 2018/5/4.
+ * 修改密码页面
  */
 
 public class ForgetPassActivity extends BaseActivity implements View.OnClickListener {
@@ -63,6 +63,7 @@ public class ForgetPassActivity extends BaseActivity implements View.OnClickList
                 regist();
                 break;
             case R.id.tv_rf_getCode:
+                //判断是否符合手机号码规则，符合则发送验证码
                 String userPhone = et_phone.getText().toString().trim();
                 if (TextUtils.isEmpty(userPhone)) {
                     ToastUtil.showToast(getApplicationContext(), "手机号不能为空");
@@ -85,7 +86,7 @@ public class ForgetPassActivity extends BaseActivity implements View.OnClickList
         String userPhone = et_phone.getText().toString().trim();
         String password = et_pass.getText().toString().trim();
         String verfnum = et_code.getText().toString().trim();
-
+        //判断手机号，验证码，密码是否正确填写，符合则可修改密码
         if (TextUtils.isEmpty(userPhone)) {
             ToastUtil.showToast(getApplicationContext(), "手机号不能为空");
             return;
